@@ -1,138 +1,233 @@
-# PP
+# QUESTION BANK FOR PYTHON PROGRAMMING INTERNAL ASSESSMENT TEST
 
-#1. Program to read three numbers (a, b, c) and count numbers between a and b divisible by c.
+**Academic Year:** 2025-26  
+**Semester:** II
+
+---
+
+## 1. Program to read three numbers (a, b, c) and count numbers between a and b divisible by c
+
+```python
 a = int(input("Enter value of a: "))
 b = int(input("Enter value of b: "))
 c = int(input("Enter value of c: "))
-count = 0
-for i in range(a, b + 1):
- if i % c == 0:
- count += 1
-print("Numbers divisible by", c, "between", a, "and", b, ":", count)
 
-3. Program to find the sum of all even numbers from 0 to 10 using while
-loop
+count = 0
+
+for i in range(a, b + 1):
+    if i % c == 0:
+        count += 1
+
+print("Numbers divisible by", c, "between", a, "and", b, ":", count)
+```
+
+---
+
+## 2. Program to find the sum of all even numbers from 0 to 10 using while loop
+
+```python
 sum_even = 0
 i = 0
+
 while i <= 10:
- if i % 2 == 0:
- sum_even += i
- i += 1
+    if i % 2 == 0:
+        sum_even += i
+    i += 1
+
 print("Sum of even numbers from 0 to 10 is:", sum_even)
-4. Program to check number entered by the user is prime number or not
-using function.
+```
+
+---
+
+## 3. Program to check number entered by the user is prime number or not using function
+
+```python
 def prime(n):
- if n <= 1:
- print("Not a Prime number")
- else:
- for i in range(2, n):
- if n % i == 0:
- print("Not a Prime number")
- break
- else:
- print("Prime number")
+    if n <= 1:
+        print("Not a Prime number")
+    else:
+        for i in range(2, n):
+            if n % i == 0:
+                print("Not a Prime number")
+                break
+        else:
+            print("Prime number")
+
 num = int(input("Enter a number: "))
 prime(num)
-5. Program to find factorial of a number using conditional statements
+```
+
+---
+
+## 4. Program to find factorial of a number using conditional statements
+
+```python
 num = int(input("Enter a number: "))
+
 if num < 0:
- print("Factorial does not exist for negative numbers")
+    print("Factorial does not exist for negative numbers")
 elif num == 0:
- print("Factorial is 1")
+    print("Factorial is 1")
 else:
- fact = 1
- for i in range(1, num + 1):
- fact *= i
- print("Factorial of", num, "is", fact)
-6. WAP to find the greatest of three numbers entered by user using
-conditional statements
+    fact = 1
+    for i in range(1, num + 1):
+        fact *= i
+    print("Factorial of", num, "is", fact)
+```
+
+---
+
+## 5. WAP to find the greatest of three numbers entered by user using conditional statements
+
+```python
 a = int(input("Enter first number: "))
 b = int(input("Enter second number: "))
 c = int(input("Enter third number: "))
+
 if a >= b and a >= c:
- print("Greatest number is:", a)
+    print("Greatest number is:", a)
 elif b >= a and b >= c:
- print("Greatest number is:", b)
+    print("Greatest number is:", b)
 else:
- print("Greatest number is:", c)
-7. Program to check whether a number is even or odd using if-else
+    print("Greatest number is:", c)
+```
+
+---
+
+## 6. Program to check whether a number is even or odd using if-else
+
+```python
 num = int(input("Enter a number: "))
+
 if num % 2 == 0:
- print("The number is Even")
+    print("The number is Even")
 else:
- print("The number is Odd")
-8. WAP to check whether a given number is prime using nested if-else
+    print("The number is Odd")
+```
+
+---
+
+## 7. WAP to check whether a given number is prime using nested if-else
+
+```python
 num = int(input("Enter a number: "))
+
 if num > 1:
- for i in range(2, num):
- if num % i == 0:
- print(num, "is not a Prime number")
- break
- else:
- print(num, "is a Prime number")
+    for i in range(2, num):
+        if num % i == 0:
+            print(num, "is not a Prime number")
+            break
+    else:
+        print(num, "is a Prime number")
 else:
- print(num, "is not a Prime number")
-9. Program to implement different types of operators in Python
+    print(num, "is not a Prime number")
+```
+
+---
+
+## 8. Program to implement different types of operators in Python
+
+```python
 a = 10
 b = 3
+
 print("Arithmetic Operators")
 print(a + b)
 print(a - b)
 print(a * b)
 print(a / b)
+
 print("Relational Operators")
 print(a > b)
 print(a < b)
 print(a == b)
+
 print("Logical Operators")
 print(a > 5 and b < 5)
 print(a > 5 or b > 5)
 print(not(a > b))
-10. Program to read a text file and print words of specified length
+```
+
+---
+
+## 9. Program to read a text file and print words of specified length
+
+```python
 length = int(input("Enter word length: "))
+
 file = open("sample.txt", "r")
 text = file.read()
 words = text.split()
+
 print("Words of length", length, ":")
 for word in words:
- if len(word) == length:
- print(word)
+    if len(word) == length:
+        print(word)
+
 file.close()
-11. Program to implement a simple calculator using functions
+```
+
+---
+
+## 10. Program to implement a simple calculator using functions
+
+```python
 def calculator(a, b):
- print("Addition:", a + b)
- print("Subtraction:", a - b)
- print("Multiplication:", a * b)
- if b == 0:
- print("Division not possible")
- else:
- print("Division:", a / b)
+    print("Addition:", a + b)
+    print("Subtraction:", a - b)
+    print("Multiplication:", a * b)
+    
+    if b == 0:
+        print("Division not possible")
+    else:
+        print("Division:", a / b)
+
 a = int(input("Enter first number: "))
 b = int(input("Enter second number: "))
+
 calculator(a, b)
-12. Write a Python program that takes two numbers as input and performs
-division. Implement exception handling to manage division by zero and
-invalid input errors gracefully.
+```
+
+---
+
+## 11. Write a Python program that takes two numbers as input and performs division. Implement exception handling to manage division by zero and invalid input errors gracefully
+
+```python
 try:
- a = int(input("Enter first number: "))
- b = int(input("Enter second number: "))
- result = a / b
- print("Result:", result)
+    a = int(input("Enter first number: "))
+    b = int(input("Enter second number: "))
+    
+    result = a / b
+    print("Result:", result)
+
 except ZeroDivisionError:
- print("Error: Division by zero is not allowed")
+    print("Error: Division by zero is not allowed")
+
 except ValueError:
- print("Error: Please enter valid integers")
+    print("Error: Please enter valid integers")
+
 except Exception:
- print("Something went wrong")
-13. Write a python program to display to print the Fibonacci sequence up
-to n-th term using a while loop
+    print("Something went wrong")
+```
+
+---
+
+## 12. Write a python program to display to print the Fibonacci sequence up to n-th term using a while loop
+
+```python
 n = int(input("Enter number of terms: "))
+
 a = 0
 b = 1
 i = 1
+
 print("Fibonacci sequence:")
+
 while i <= n:
- print(a, end=" ")
- a = b
- b = a + b
- i +
+    print(a, end=" ")
+    a = b
+    b = a + b
+    i += 1
+```
+
+---
