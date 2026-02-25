@@ -1,10 +1,3 @@
-# QUESTION BANK FOR PYTHON PROGRAMMING INTERNAL ASSESSMENT TEST
-
-**Academic Year:** 2025-26  
-**Semester:** II
-
----
-
 ## 1. Program to read three numbers (a, b, c) and count numbers between a and b divisible by c
 
 ```python
