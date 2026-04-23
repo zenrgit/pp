@@ -165,20 +165,35 @@ file.close()
 ## 10. Program to implement a simple calculator using functions
 
 ```python
-def calculator(a, b):
-    print("Addition:", a + b)
-    print("Subtraction:", a - b)
-    print("Multiplication:", a * b)
-    
-    if b == 0:
-        print("Division not possible")
-    else:
-        print("Division:", a / b)
+def add(a,b):
+    print("Add")
+    return a + b
+def sub (a,b):
+    print("Sub")
+    return a-b
+def mul (a,b):
+    print("Multiply")
+    return a * b
+def div (a,b):
+    print("Divide")
+    return a/b
 
-a = int(input("Enter first number: "))
-b = int(input("Enter second number: "))
-
-calculator(a, b)
+print("Arithmetic Operations")
+print("Enter two numbers ")
+a = int(input())
+b = int(input())
+print("1.Add 2. Sub 3. Multiply 4. Divide
+ch = int(input())
+if ch == 1:
+    calculate = add
+elif ch == 2:
+    calculate = sub
+elif ch == 3:
+    calculate = mul
+else:
+    calculate = div
+res = calculate (a, b)
+print(res)
 ```
 
 ---
